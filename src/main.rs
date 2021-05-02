@@ -8,7 +8,7 @@ fn main() {
     let basic_hundred = [
         "one hundred","two hundred","three hundred","four hundred","five hundred","six hundred","seven hundred","eight hundred","nine hundred"
     ];
-    let my_num = 999.0;
+    let my_num = 121.0;
     if my_num < 20.0 {
         println!("Your number is {}",basic_num[my_num as usize])
     } else if my_num > 19.0 && my_num <= 99.0 {
@@ -26,6 +26,8 @@ fn main() {
         let units = get_tens as f64 % 10.0;
         if tens == 0.0 && units == 0.0 {
             println!("Your number is {}",basic_hundred[hundred as usize - 1]);
+        } else if get_tens > 0.0 && get_tens < 20.0 {
+            println!("Your number is {} {}",basic_hundred[hundred as usize - 1],basic_num[get_tens as usize]);
         } else if units == 0.0 {
             println!("Your number is {} {}",basic_hundred[hundred as usize - 1],basic_tens[tens as usize - 2]);
         } else {
